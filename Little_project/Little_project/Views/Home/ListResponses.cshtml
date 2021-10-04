@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Little_project.Models.GuestResponse>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid text-lg-center justify-content-center">
+        <h2>Here is a list of people attending the party</h2>
+
+    <div class=" container align-content-center">
+        <table class=" container justify-content-center">
+            <thead>
+                <tr>
+                    <th> Name</th>
+                    <th>  Email</th>
+                    <th>  Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Little_project.Models.GuestResponse r in Model)
+                {
+                    <tr>
+                        <td> @r.Name   |</td>
+                        <td> @r.Email  |</td>
+                        <td> @r.Phone  |</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>
